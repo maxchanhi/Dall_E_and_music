@@ -62,7 +62,8 @@ def generate_sound(matrix, stop_event):
 
     # Define a high-pass filter with a cutoff frequency of 3000 Hz
     b, a = signal.butter(4, 4000 / nyq_rate, btype="lowpass")
-
+    devices = sa.query_devices()
+    print(devices)
     for i in range(matrix.shape[0]):
         for j in range(matrix.shape[1]):
             if stop_event.is_set():
@@ -91,7 +92,8 @@ def generate_sound(matrix, stop_event):
             # Convert the filtered signal to bytes and play it
             signal_int = np.int16(signal_filtered * 32767)
             signal_bytes = signal_int.tobytes()
-            playback_object = sa.play_buffer(signal_bytes, 1, 2, sample_rate)
+            playback_object = sa.play_buffer(sine_wave, num_channels=1, bytes_per_sample=2, sample_rate=44100, device=0)
+    
     
     return playback_object  # Return the playback object after it has been assigned a value
 
