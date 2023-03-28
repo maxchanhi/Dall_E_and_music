@@ -2,6 +2,8 @@ import streamlit as st
 from functions import generate_image,analyze_colors,remove_ellipsis
 from scipy_chatgpt import get_piano_notes,play_frequencies,map_rgb_to_key_number
 import simpleaudio as sa
+devices = sa.query_devices()
+print(devices)
 st.title("DALL-E Image Generation and Music V2")
 stop_sound=st.button("Stop", key="s")
 prompt_input = st.text_input("Enter a prompt about pollution:", key="widget_id")
