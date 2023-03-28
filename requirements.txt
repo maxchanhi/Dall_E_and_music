@@ -1,0 +1,4 @@
+
+numpy
+simpleaudio
+scipy
