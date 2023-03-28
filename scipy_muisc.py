@@ -26,7 +26,7 @@ frequency = 440
 sine_wave = get_sine_wave(frequency, duration=2, amplitude=2048)
 wavfile.write('pure_440.wav', rate=44100, data=sine_wave.astype(np.int16))
 audio = sa.Audio(sine_wave, sample_rate=44100)
-play_obj = audio.play()
+play_obj = sa.play_buffer(sine_wave, num_channels=1, bytes_per_sample=2, sample_rate=44100, device=0)
 
 # Wait for the sound to finish playing
 play_obj.wait_done()
