@@ -1,4 +1,5 @@
-pip
+xcode-select --install
+
 setuptools
 streamlit
 numpy
