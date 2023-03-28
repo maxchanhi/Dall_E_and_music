@@ -1,4 +1,4 @@
-libasound2-dev
+
 setuptools
 streamlit
 numpy
