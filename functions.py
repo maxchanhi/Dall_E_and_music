@@ -5,7 +5,8 @@ import numpy as np
 import simpleaudio as sa
 from scipy import signal
 import streamlit as st
-os.getenv()
+import os
+APIKEY = os.environ.get('APIKEY')
 
 
 DALLE_API_ENDPOINT = "https://api.openai.com/v1/images/generations"
