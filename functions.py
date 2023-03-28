@@ -5,7 +5,7 @@ import numpy as np
 import simpleaudio as sa
 from scipy import signal
 import streamlit as st
-
+APIKEY= ''
 
 DALLE_API_ENDPOINT = "https://api.openai.com/v1/images/generations"
 def generate_image(prompt):
