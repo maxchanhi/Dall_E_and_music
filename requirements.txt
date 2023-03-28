@@ -1,4 +1,4 @@
-
+python3.11
 streamlit
 numpy
 simpleaudio
