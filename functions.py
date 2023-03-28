@@ -20,7 +20,7 @@ def generate_image(prompt):
     # Send the request to the DALL-E API endpoint
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {'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'}"
+        "Authorization": f"Bearer {APIKEY}"
     }
     response = requests.post(DALLE_API_ENDPOINT, json=payload, headers=headers)
     response.raise_for_status()
