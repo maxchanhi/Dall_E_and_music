@@ -1,4 +1,4 @@
-xcode-select --install
+xcode-select
 
 setuptools
 streamlit
