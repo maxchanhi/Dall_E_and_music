@@ -1,5 +1,4 @@
-xcode-select
-
+libasound2-dev
 setuptools
 streamlit
 numpy
