@@ -2,5 +2,5 @@ pip
 setuptools
 streamlit
 numpy
-simpleaudio
+pip3 install simpleaudio
 scipy
